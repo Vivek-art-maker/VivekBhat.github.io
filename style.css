@@ -455,3 +455,10 @@ font-weight:700;
     display:block;
     background:#ffffff;
 }
+
+#about{max-width:1400px;padding:80px 5%;}
+.about-container,.about-text{display:block;width:100%;}
+.project-content{width:100%;max-width:100%;}
+.project-content p{max-width:100%;width:100%;}
+.project-image{height:520px;}
+#contact{max-width:1400px;clear:both;padding:80px 5%;display:block;}
