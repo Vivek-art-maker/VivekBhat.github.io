@@ -439,14 +439,19 @@ font-weight:700;
 .project-links a{
     text-decoration:none;
 }
-.project-card img{
+.project-image{
+    display:block;
     width:100%;
-    height:240px;
-    object-fit:cover;
-    border-radius:12px;
-    transition:.3s ease;
+    height:420px;      /* Takes roughly half the project card */
+    overflow:hidden;
+    border-radius:16px;
 }
 
-.project-card img:hover{
-    transform:scale(1.02);
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;      /* Shows full dashboard */
+    object-position:center;
+    display:block;
+    background:#ffffff;
 }
