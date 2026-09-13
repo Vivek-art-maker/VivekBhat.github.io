@@ -339,50 +339,93 @@ h2, #about h2{
     line-height:1.35;
 }
 
-/* ============ PAGE 4: CONTACT (white) ============ */
+/* ============ PAGE 4: CONTACT (dark teal) ============ */
 
-#contact{
-    background:#ffffff;
+#contact.contact-section{
+    background:radial-gradient(ellipse at top, #114b56 0%, #0a323b 55%, #051c22 100%);
+    max-width:100%;
+    padding:110px 8% 100px;
+    text-align:center;
 }
 
-.contact-links{
-    display:flex;
-    justify-content:center;
-    gap:36px;
-    flex-wrap:wrap;
-    margin-bottom:20px;
-}
-
-.contact-links a{
-    color:var(--ink);
-    width:56px;
-    height:56px;
-    border:2px solid var(--ink);
-    border-radius:50%;
-    display:flex;
+.contact-eyebrow{
+    display:inline-flex;
     align-items:center;
-    justify-content:center;
-    transition:.3s;
+    gap:14px;
+    color:var(--coral);
+    font-family:'Muli', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    margin-bottom:16px;
 }
 
-.contact-links a svg{
-    width:24px;
-    height:24px;
-}
-
-.contact-links a:hover{
-    color:#ffffff;
+.contact-eyebrow::after{
+    content:'';
+    width:40px;
+    height:1px;
     background:var(--coral);
-    border-color:var(--coral);
+    display:inline-block;
 }
 
-.contact-caption{
+.contact-heading{
+    font-family:'Merriweather', serif;
+    font-weight:700;
+    font-size:46px;
+    text-transform:none;
+    letter-spacing:0;
+    color:#ffffff;
+    margin-bottom:18px;
+}
+
+.contact-tagline{
+    font-family:'Merriweather', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:19px;
+    color:#a9c9c8;
+    max-width:640px;
+    margin:0 auto 50px;
+}
+
+.contact-cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.contact-card{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 26px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:10px;
+    background:rgba(255,255,255,.04);
+    color:#eaf3f2;
+    font-family:'Muli', sans-serif;
     font-size:15px;
-    color:var(--text-muted);
+    text-decoration:none;
+    transition:.25s;
+}
+
+.contact-card svg{
+    width:18px;
+    height:18px;
+    color:#5fd0c9;
+    flex-shrink:0;
+}
+
+.contact-card:hover{
+    background:rgba(255,255,255,.09);
+    border-color:rgba(255,255,255,.4);
 }
 
 @media(max-width:600px){
-    .contact-links{ gap:24px; }
+    .contact-heading{ font-size:32px; }
+    .contact-cards{ flex-direction:column; align-items:center; }
 }
 
 /* ============ PROJECT DETAIL PAGE (coral) ============ */
