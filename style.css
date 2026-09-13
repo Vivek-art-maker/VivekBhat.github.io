@@ -385,7 +385,7 @@ h2, #about h2{
     font-weight:400;
     font-size:17px;
     color:#a9c9c8;
-    max-width:560px;
+    white-space:nowrap;
     margin:0 auto 40px;
 }
 
@@ -401,7 +401,7 @@ h2, #about h2{
     align-items:center;
     gap:8px;
     padding:12px 20px;
-    border:2px solid #000000;
+    border:1px solid rgba(255,255,255,.4);
     border-radius:8px;
     background:rgba(255,255,255,.03);
     color:#ffffff;
@@ -419,12 +419,13 @@ h2, #about h2{
 }
 
 .contact-card:hover{
-    background:rgba(255,255,255,.09);
-    border-color:#000000;
+    background:rgba(255,255,255,.1);
+    border-color:rgba(255,255,255,.7);
 }
 
 @media(max-width:600px){
     .contact-heading{ font-size:32px; }
+    .contact-tagline{ white-space:normal; font-size:15px; }
     .contact-cards{ flex-direction:column; align-items:center; }
 }
 
