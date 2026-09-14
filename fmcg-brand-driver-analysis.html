@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="FMCG Brand Driver Analysis — a regression-based study of what drives Purchase Intent, by Vivek Bhat." />
+  <title>FMCG Brand Driver Analysis | Vivek Bhat</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="project-page">
+
+  <nav class="navbar project-navbar">
+      <a href="index.html" class="logo">HOME</a>
+      <ul class="nav-links">
+          <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+  </nav>
+
+  <main class="project-detail">
+    <div class="project-detail-grid">
+
+        <div class="project-detail-text">
+            <h1 class="project-title">FMCG Brand Driver Analysis</h1>
+
+            <h2>THE PROBLEM</h2>
+            <p>Brand teams track dozens of metrics — awareness, ad recall, quality perception, trust, value, innovation, availability — but rarely know which ones actually move purchase intent, or by how much. Without that, budget and messaging decisions default to gut feel rather than evidence.</p>
+
+            <h2>SOLUTION</h2>
+            <p>I built a driver analysis using multiple regression to quantify the relationship between seven brand health metrics and Purchase Intent, across a sample of 500 respondents. Each driver's regression coefficient (Beta) shows its independent impact on purchase intent, with significance levels flagging which effects are statistically reliable versus noise.</p>
+
+            <h2>APPROACH</h2>
+            <p>Starting from survey-level brand tracking data, I ran a linear regression of Purchase Intent against the seven brand metrics, extracted standardised coefficients and p-values for each, and visualised them as a ranked driver chart in R. Bars are ordered by effect size and colour-coded by statistical significance, so the strongest and most reliable levers are immediately visible.</p>
+
+            <h2>BUSINESS INSIGHTS</h2>
+            <ul class="project-tools" style="list-style: disc; padding-left: 1.2rem;">
+                <li><strong>Perceived Quality is the dominant lever</strong> (β = 0.32, p &lt; 0.001) — nearly double the next strongest driver. Product and quality perception investments carry the largest expected payoff on purchase intent.</li>
+                <li><strong>Brand Trust and Value for Money follow closely</strong> (β = 0.20 and 0.18, both p &lt; 0.001), confirming that credibility and price-value perception are core, not secondary, purchase drivers for this category.</li>
+                <li><strong>Innovation and Availability tie at β = 0.13</strong> (p &lt; 0.001) — meaningful but secondary. New product news and distribution/on-shelf presence matter, but won't outweigh weaknesses in quality or trust.</li>
+                <li><strong>Ad Recall and Brand Awareness are the weakest, though still significant, drivers</strong> (β = 0.08, p &lt; 0.01, and β = 0.07, p &lt; 0.05). Media investment builds the top of the funnel, but on its own converts to purchase intent far less efficiently than quality or trust-building activity.</li>
+                <li><strong>Recommendation:</strong> reallocate marginal budget away from pure awareness/recall campaigns and toward product quality signalling and trust-building content (reviews, guarantees, transparency) for the fastest lift in purchase intent per unit of spend.</li>
+            </ul>
+
+            <h2>TOOLS USED</h2>
+            <ul class="project-tools">
+                <li>R / ggplot2</li>
+                <li>Multiple Regression</li>
+                <li>Brand Tracking Data</li>
+                <li>Consumer Insights</li>
+            </ul>
+
+            <a href="https://rpubs.com/Vivekbhat/1458832" target="_blank" class="btn btn-light-outline">View Interactive Chart on RPubs</a>
+        </div>
+
+        <div class="project-detail-media">
+            <figure>
+                <img src="Images/fmcg-brand-driver-analysis.png" alt="FMCG Brand Driver Analysis chart showing regression coefficients for Purchase Intent">
+                <figcaption>Regression Coefficients Explaining Purchase Intent (n = 500)</figcaption>
+            </figure>
+        </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
