@@ -516,6 +516,14 @@ h2, #about h2{
     margin-bottom:6px;
 }
 
+.project-note{
+    margin-top:24px;
+    font-size:14px;
+    line-height:1.7;
+    opacity:.8;
+    font-style:italic;
+}
+
 .btn-light-outline{
     margin-top:30px;
     background:transparent;
