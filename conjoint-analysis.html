@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Conjoint Analysis — a choice-based conjoint study uncovering what really drives FMCG snack purchase decisions, by Vivek Bhat." />
+  <title>Conjoint Analysis | Vivek Bhat</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="project-page">
+
+  <nav class="navbar project-navbar">
+      <a href="index.html" class="logo">HOME</a>
+      <ul class="nav-links">
+          <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+  </nav>
+
+  <main class="project-detail">
+    <div class="project-detail-grid">
+
+        <div class="project-detail-text">
+            <h1 class="project-title">Conjoint Analysis</h1>
+
+            <h2>THE PROBLEM</h2>
+            <p>Snack brands juggle brand name, flavor, pack size, price and health positioning when designing a new SKU, but stated preference surveys ("what matters to you?") rarely reveal what consumers actually trade off when forced to choose between real, competing products. Without that, pricing and portfolio decisions end up guessing at which attributes truly move the needle.</p>
+
+            <h2>SOLUTION</h2>
+            <p>I ran a choice-based conjoint (CBC) study across 500 respondents in the FMCG snacking category, covering five attributes — Brand, Flavor, Pack Size, Price and Health positioning. From the choice data I estimated part-worth utilities for every attribute level, derived relative attribute importance, and simulated market share for competing product profiles using a logit choice rule.</p>
+
+            <h2>APPROACH</h2>
+            <p>Respondents were shown repeated sets of hypothetical snack profiles (varying Brand, Flavor, Pack Size, Price and Health claims) and asked to pick their preferred option. I fit a choice model to recover zero-centered part-worth utilities for each attribute level, converted the utility ranges into relative importance scores, and used the estimated utilities to simulate predicted market share for three competing product profiles under a multinomial logit rule.</p>
+
+            <h2>BUSINESS INSIGHTS</h2>
+            <ul class="project-tools" style="list-style: disc; padding-left: 1.2rem;">
+                <li><strong>Brand dominates the purchase decision (57.99% relative importance)</strong> — more than three times the next-ranked attribute. Kurkure and Bingo carry substantial positive utility over Lay's (the reference level), so brand equity, not price or flavor, is the primary lever for winning share in this category.</li>
+                <li><strong>Flavor is the second lever (18.22%)</strong>, but only Masala is competitive with the baseline; Cheese and Salted both carry negative utility. New product development should prioritise Masala-led variants over Cheese or Salted line extensions.</li>
+                <li><strong>Pack Size matters more than Price (14.22% vs 8.38%)</strong>. The 100g pack carries the highest utility, meaningfully ahead of 75g and 50g — consumers respond more to "more product" than to a lower price point, so larger formats are a stronger share driver than discounting.</li>
+                <li><strong>Price shows a mild positive utility as it rises from ₹20 to ₹40</strong>, suggesting a modest quality-signalling effect rather than pure price sensitivity in this range — consumers are not simply choosing the cheapest option, so aggressive discounting is unlikely to be the most efficient share-growth lever.</li>
+                <li><strong>Health positioning is nearly irrelevant to choice (1.19% importance)</strong>, with Baked, High Protein and Regular claims producing almost identical utility. "Healthier" claims alone are unlikely to justify a price premium or reformulation cost unless paired with a strong brand and flavor.</li>
+                <li><strong>Market simulation confirms brand-led dominance:</strong> the profile combining the strongest brand and flavor levels (Product C) captures a projected 93.43% share against just 6.25% and 0.32% for the weaker profiles — reinforcing that a strong brand paired with the right flavor overwhelms price and health-based positioning.</li>
+                <li><strong>Recommendation:</strong> prioritise brand-building and Masala-led flavor innovation in larger pack formats over health claims or price cuts; use small price increases to signal quality rather than compete purely on discounting.</li>
+            </ul>
+
+            <h2>TOOLS USED</h2>
+            <ul class="project-tools">
+                <li>R / ggplot2</li>
+                <li>Choice-Based Conjoint (CBC)</li>
+                <li>Part-Worth Utility Estimation</li>
+                <li>Logit Market Share Simulation</li>
+            </ul>
+        </div>
+
+        <div class="project-detail-media">
+            <figure>
+                <img src="Images/conjoint-relative-importance.png" alt="Relative Attribute Importance chart from FMCG choice-based conjoint study">
+                <figcaption>Relative Attribute Importance (n = 500)</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/conjoint-part-worth-utilities.png" alt="Part-Worth Utility Functions by Attribute, zero-centered reference baselines">
+                <figcaption>Part-Worth Utility Functions by Attribute</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/conjoint-market-share-simulation.png" alt="Simulated market share across competing product profiles using logit choice rule">
+                <figcaption>Simulated Market Share Across Competing Profiles</figcaption>
+            </figure>
+        </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
