@@ -64,9 +64,17 @@
     <h2>Projects</h2>
     <hr class="divider">
 
+    <div class="project-filter" role="tablist" aria-label="Filter projects by tool">
+        <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="filter-btn" data-filter="powerbi" role="tab" aria-selected="false">Power BI</button>
+        <button type="button" class="filter-btn" data-filter="tableau" role="tab" aria-selected="false">Tableau</button>
+        <button type="button" class="filter-btn" data-filter="r" role="tab" aria-selected="false">R</button>
+        <button type="button" class="filter-btn" data-filter="spss" role="tab" aria-selected="false">IBM SPSS</button>
+    </div>
+
     <div class="project-grid">
 
-        <a href="brand-lift-dashboard.html" class="project-tile">
+        <a href="brand-lift-dashboard.html" class="project-tile" data-category="tableau">
             <img src="Images/campaign-performance-analysis.png" alt="Campaign Performance Analysis Dashboard">
             <div class="project-tile-overlay">
                 <p class="tile-eyebrow">Consumer Insights</p>
@@ -74,7 +82,7 @@
             </div>
         </a>
 
-        <a href="shopper-insights-dashboard.html" class="project-tile">
+        <a href="shopper-insights-dashboard.html" class="project-tile" data-category="powerbi">
             <img src="Images/shopper-insights-dashboard.png" alt="UK Alcohol Category Insights 2025 Power BI Dashboard">
             <div class="project-tile-overlay">
                 <p class="tile-eyebrow">Shopper Analytics</p>
@@ -82,7 +90,7 @@
             </div>
         </a>
 
-        <a href="fmcg-brand-driver-analysis.html" class="project-tile">
+        <a href="fmcg-brand-driver-analysis.html" class="project-tile" data-category="r">
             <img src="Images/fmcg-brand-driver-analysis.png" alt="FMCG Brand Driver Analysis regression chart">
             <div class="project-tile-overlay">
                 <p class="tile-eyebrow">Consumer Insights</p>
@@ -90,7 +98,7 @@
             </div>
         </a>
 
-        <a href="conjoint-analysis.html" class="project-tile">
+        <a href="conjoint-analysis.html" class="project-tile" data-category="r">
             <img src="Images/conjoint-relative-importance.png" alt="Conjoint Analysis relative attribute importance chart">
             <div class="project-tile-overlay">
                 <p class="tile-eyebrow">Consumer Insights</p>
@@ -98,7 +106,7 @@
             </div>
         </a>
 
-        <a href="csat-service-experience-analysis.html" class="project-tile">
+        <a href="csat-service-experience-analysis.html" class="project-tile" data-category="spss">
             <img src="Images/csat-regression-output.png" alt="SPSS regression output for CSAT and service experience analysis">
             <div class="project-tile-overlay">
                 <p class="tile-eyebrow">Survey Analytics</p>
@@ -150,5 +158,25 @@
     </div>
   </section>
 
+
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.filter-btn');
+      var tiles=document.querySelectorAll('.project-tile');
+      btns.forEach(function(b){
+        b.addEventListener('click',function(){
+          var f=b.getAttribute('data-filter');
+          btns.forEach(function(x){
+            var on=x===b;
+            x.classList.toggle('active',on);
+            x.setAttribute('aria-selected',on?'true':'false');
+          });
+          tiles.forEach(function(t){
+            t.classList.toggle('hidden',f!=='all'&&t.getAttribute('data-category')!==f);
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

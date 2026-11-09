@@ -281,7 +281,7 @@ h2, #about h2{
     display:flex;
     flex-wrap:wrap;
     gap:22px;
-    justify-content:center;
+    justify-content:flex-start;
     max-width:1200px;
     margin:0 auto;
 }
@@ -342,6 +342,52 @@ h2, #about h2{
     font-size:16px;
     font-weight:800;
     line-height:1.35;
+}
+
+
+/* Project filter ribbon */
+.project-filter{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:0;
+    max-width:1200px;
+    margin:0 auto 34px;
+    border-bottom:1px solid #e3e3e3;
+}
+
+.filter-btn{
+    background:none;
+    border:none;
+    border-bottom:3px solid transparent;
+    margin-bottom:-1px;
+    padding:14px 26px;
+    font-family:'Poppins', sans-serif;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.5px;
+    color:var(--text-muted);
+    cursor:pointer;
+    transition:.25s;
+}
+
+.filter-btn:hover{
+    color:var(--coral);
+}
+
+.filter-btn.active{
+    color:var(--coral);
+    border-bottom-color:var(--coral);
+}
+
+.project-tile.hidden{
+    display:none;
+}
+
+@media(max-width:600px){
+    .project-filter{ justify-content:center; }
+    .filter-btn{ padding:12px 14px; font-size:14px; }
 }
 
 /* ============ PAGE 4: CONTACT (dark teal) ============ */
