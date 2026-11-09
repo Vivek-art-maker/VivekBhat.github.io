@@ -276,22 +276,23 @@ h2, #about h2{
 #projects{
     background:#ffffff;
     max-width:100%;
-    padding:90px 5%;
+    padding:90px 0 0;
 }
 
 .project-grid{
-    display:flex;
-    flex-wrap:wrap;
-    gap:22px;
-    justify-content:flex-start;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+    width:100%;
     max-width:none;
     margin:0;
 }
 
 .project-tile{
     position:relative;
-    width:260px;
-    height:190px;
+    width:100%;
+    height:auto;
+    aspect-ratio:3 / 2;
     overflow:hidden;
     display:block;
     text-decoration:none;
@@ -347,6 +348,14 @@ h2, #about h2{
 }
 
 
+@media(max-width:900px){
+    .project-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+
+@media(max-width:520px){
+    .project-grid{ grid-template-columns:1fr; }
+}
+
 /* Project filter ribbon */
 .project-filter{
     display:flex;
@@ -355,7 +364,7 @@ h2, #about h2{
     flex-wrap:wrap;
     gap:0;
     max-width:none;
-    margin:0 0 34px;
+    margin:0 5% 34px;
     border-bottom:1px solid #e3e3e3;
 }
 
